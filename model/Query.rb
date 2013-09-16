@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'active_record'
 require 'mysql'
-
+#comment in query.rb
 ActiveRecord::Base.logger = Logger.new(STDOUT)
  
 ActiveRecord::Base.establish_connection(
