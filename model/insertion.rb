@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'active_record'
 require 'mysql'
-#4th commit
-#comment 4th
+#5th commit
+#comment 5th
 ActiveRecord::Base.logger = Logger.new(STDOUT)
  ActiveRecord::Base.establish_connection(
     :adapter => "mysql",
