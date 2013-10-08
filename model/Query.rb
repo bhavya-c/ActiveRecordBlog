@@ -33,7 +33,7 @@ User.joins(:posts).where("posts.id = '4'").each do |p|
  puts p.username
 end
 
-print "User who commented 'Awwesome US pics' is: "
+print "User who commented 'Awwesome US pics' is: mine "
 User.joins(:posts).where("posts.comment = 'Awesome US pics'").each do |p|
  puts p.username
 end
