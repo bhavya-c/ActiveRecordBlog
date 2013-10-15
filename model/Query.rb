@@ -33,17 +33,12 @@ User.joins(:posts).where("posts.id = '4'").each do |p|
  puts p.username
 end
 
-<<<<<<< HEAD
+
 print "User who commented 'Awwesome US pics' is: mine "
 User.joins(:posts).where("posts.comment = 'Awesome US pics'").each do |p|
  puts p.username
 end
-=======
-#print "User who commented 'Awwesome US pics' is: "
-#User.joins(:posts).where("posts.comment = 'Awesome US pics'").each do |p|
- #puts p.username
-#end
->>>>>>> parent of 6041651... Trying with a comment in blog.rb
+
 
 print "Number of comments on blog 2 is: "
 comm=Post.where(blog_id: '2')
