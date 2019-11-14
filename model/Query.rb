@@ -30,6 +30,7 @@ puts "The Total number of blogs is "+ Blog.count.to_s
 
 print "Username of post 1 is: "
 User.joins(:posts).where("posts.id = '4'").each do |p|
+  puts "test"
  puts p.username
 end
 
