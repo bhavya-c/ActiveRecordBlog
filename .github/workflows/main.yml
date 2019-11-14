@@ -12,10 +12,9 @@ jobs:
     - name: Run a one-line script
       run: |
         echo Hello, world and this!
-        echo $HOME
+        echo `ls $HOME`
     - name: Decrypt large secret
-      run: |
-        gpg --quiet --batch --yes --decrypt --passphrase=${{ secrets.encrypt_config_password}} --output $HOME/config/google_auth.development.json $HOME/config/google_auth.development.json.gpg
+      run: ./.github/decrypt_secret.sh
       env: 
         secret_key: ${{ secrets.encrypt_config_password }}
     - name: Test printing your secret (Remove this step in production)
