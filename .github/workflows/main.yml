@@ -10,8 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      env:
-        ACTIONS_RUNNER_DEBUG: true
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
