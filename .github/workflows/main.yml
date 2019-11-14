@@ -16,7 +16,8 @@ jobs:
         echo `ls $GITHUB_WORKSPACE`
         echo `pwd`
     - name: Decrypt large secret
-      run: ./decrypt_secret.sh
+      run: |
+        gpg --quiet --batch --yes --decrypt --passphrase="$secret_key" --output google_auth.development.json google_auth.development.json.gpg
       env: 
         secret_key: ${{ secrets.encrypt_config_password }}
     - name: Test printing your secret (Remove this step in production)
