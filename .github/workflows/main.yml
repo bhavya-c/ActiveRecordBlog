@@ -20,4 +20,4 @@ jobs:
       env: 
         secret_key: ${{ secrets.encrypt_config_password }}
     - name: Test printing your secret (Remove this step in production)
-      run: cat $HOME/config/google_auth.development.json
+      run: cat google_auth.development.json
