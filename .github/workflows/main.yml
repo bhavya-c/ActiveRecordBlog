@@ -12,9 +12,10 @@ jobs:
     - name: Run a one-line script
       run: |
         echo Hello, world and this!
-        echo `ls $HOME`
+        echo ${{ GITHUB_WORKSPACE }}
+        echo `ls $GITHUB_WORKSPACE`
     - name: Decrypt large secret
-      run: ./decrypt_secret.sh
+      run: ./.github/decrypt_secret.sh
       env: 
         secret_key: ${{ secrets.encrypt_config_password }}
     - name: Test printing your secret (Remove this step in production)
